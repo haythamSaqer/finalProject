@@ -1,12 +1,5 @@
-from django.contrib.auth.models import User
-from django.shortcuts import render
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.authtoken.models import Token
-from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import IsAuthenticated
-
-from .models import Customer, Employee
-from .serializers import CustomerSerializer, EmployeeSerializer
+from .models import Customer
+from .serializers import CustomerSerializer
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
