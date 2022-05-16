@@ -21,7 +21,7 @@ class ProjectAddPermission(permissions.BasePermission):
             print("reach false ")
             return False
         except Employee.DoesNotExist:
-            print("Can't get emp")
+            print("Can't get emp " )
             return False
 
     def has_permission(self, request, view):

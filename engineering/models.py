@@ -1,4 +1,6 @@
 from django.db import models
+
+from hr.models import Employee
 from marketing.models import Contract
 
 from customer.models import Customer
@@ -79,3 +81,22 @@ class MoodBoardPartImages(models.Model):
 
     def __str__(self):
         return self.imageNote
+
+
+class ProjectTasks(models.Model):
+    project = models.ForeignKey(Project,
+                                on_delete=models.CASCADE)  # foreigen key for customer info ( phone number there )
+    employee = models.ForeignKey(Employee,
+                                   on_delete=models.CASCADE)  # foreigen key for customer info ( phone number there )
+    taskName = models.CharField(max_length=300)
+    details = models.TextField()
+    moodBoardPartT = models.ForeignKey('MoodBoardPart', on_delete=models.CASCADE)
+    numberOfMeters = models.IntegerField()
+    numberOfWindows = models.IntegerField()
+    completedByEmployee = models.BooleanField()
+    confirmedBySuperVisor = models.BooleanField()
+    confirmedByCustomer = models.BooleanField()
+
+
+    def __str__(self):
+        return self.taskName

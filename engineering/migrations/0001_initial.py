@@ -34,14 +34,14 @@ class Migration(migrations.Migration):
             name='MoodBoard',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('notes', models.TextField(max_length=200)),
+                ('notes.txt', models.TextField(max_length=200)),
             ],
         ),
         migrations.CreateModel(
             name='MoodBoardPart',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('notes', models.CharField(max_length=200)),
+                ('notes.txt', models.CharField(max_length=200)),
                 ('moodBoardParent', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='engineering.moodboard')),
             ],
         ),

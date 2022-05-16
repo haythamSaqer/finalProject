@@ -1,0 +1,4 @@
+rabbitmq-server
+celery -A finalProject worker -l INFO
+pip freeze>> requirements.txt
+pip install requirements.txt

@@ -96,7 +96,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('datetime', models.DateTimeField(auto_now=True)),
                 ('subject', models.CharField(max_length=200)),
-                ('notes', models.TextField()),
+                ('notes.txt', models.TextField()),
                 ('status', models.CharField(choices=[('C', 'Canceled'), ('D', 'Done'), ('P', 'Pending'), ('S', 'Shifted')], max_length=40)),
                 ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='customer.customer')),
                 ('employee', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hr.employee')),

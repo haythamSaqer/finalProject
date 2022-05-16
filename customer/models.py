@@ -65,7 +65,7 @@ post_save.connect(create_token, sender=User)
 #     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 #     type = models.ForeignKey(MeetingType, on_delete=models.CASCADE)
 #     subject = models.CharField(max_length=200)
-#     notes = models.TextField()
+#     notes.txt = models.TextField()
 #
 #     def __str__(self):
 #         return self.subject + " " + self.customer.__str__()
